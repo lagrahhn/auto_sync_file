@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  markdown-sync:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./markdown_files:/app/markdown_files
+      - ./logs:/app/logs
+    environment:
+      - FLASK_ENV=production
+      - API_TOKENS=your_api_token
+      - ENABLE_VERSIONING=true
+      - MAX_VERSIONS=10
+    networks:
+      - markdown-sync-net
+
+networks:
+  markdown-sync-net:
+    driver: bridge 

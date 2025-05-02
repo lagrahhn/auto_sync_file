@@ -1,0 +1,41 @@
+{
+  "name": "auto_sync",
+  "version": "1.0.0",
+  "description": "自动监控Markdown文件并与服务端同步",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "setup": "node install.js",
+    "startup": "node setup-startup.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop markdown-sync",
+    "pm2:restart": "pm2 restart markdown-sync",
+    "pm2:status": "pm2 status",
+    "pm2:logs": "pm2 logs markdown-sync",
+    "pm2:monitor": "pm2 monit",
+    "win-service:install": "node windows-service.js",
+    "win-service:uninstall": "node windows-service.js --uninstall"
+  },
+  "keywords": [
+    "markdown",
+    "sync",
+    "monitor"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chokidar": "^3.5.3",
+    "pm2": "^5.3.0",
+    "dotenv": "^16.3.1",
+    "path": "^0.12.7",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "optionalDependencies": {
+    "node-windows": "^1.0.0-beta.8"
+  }
+} 

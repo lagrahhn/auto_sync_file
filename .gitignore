@@ -1,0 +1,8 @@
+flask-sync/Lib/*
+flask-sync/Include/*
+flask-sync/__pycache__/*
+flask-sync/Scripts/*
+flask-sync/logs/*
+flask-sync/utils/__pycache__/*
+node_monitor/node_modules/*
+flask-sync/routes/__pycache__/*
