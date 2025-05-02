@@ -146,4 +146,4 @@ npm run win-service:uninstall
 
 ## 许可证
 
-ISC 
+MIT
